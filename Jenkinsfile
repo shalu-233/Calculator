@@ -7,7 +7,7 @@ pipeline {
         maven 'MAVEN-3.9.9'
     }
     triggers {
-        pollSCM(* * * * *)
+        pollSCM('* * * * *')
     }
     stages {
         stage('pull') {
