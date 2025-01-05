@@ -3,6 +3,7 @@ pipeline {
     options {
         timeout(time: 1, unit: 'MINUTES')
     }
+    parameter
     tools {
         maven 'MAVEN-3.9.9'
     }
@@ -19,6 +20,11 @@ pipeline {
         stage('build') {
             steps {
                 sh 'mvn clean package'
+            }
+        }
+        stage('archieve') {
+            steps {
+                junit '**/target/*.jar'
             }
         }
     }
