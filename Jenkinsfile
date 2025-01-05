@@ -28,7 +28,7 @@ pipeline {
         }
         stage('archieve') {
             steps {
-                junit '**/target/*.jar'
+                archiveArtifacts artifacts: '**/target/*.jar'
             }
         }
     }
