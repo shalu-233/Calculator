@@ -3,7 +3,7 @@ pipeline {
     options {
         timeout(time: 1, unit: 'MINUTES')
     }
-    parameter {
+    parameters {
         string(name: 'BRANCH', defaultValue: 'main')
         string(name: 'maven' , defaultValue: 'MAVEN-3.9.9')
         string(name: 'GOALS', defaultValue: 'clean package')
